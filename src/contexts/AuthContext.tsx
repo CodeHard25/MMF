@@ -53,7 +53,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = (
       options: {
         redirectTo: `${
           globalThis.location?.origin ||
-          "https://mens-mastery-framework-4gnwfeayd.vercel.app"
+          "https://mens-mastery-framework-l4eblv1sh.vercel.app"
         }/auth/callback`,
       },
     });
