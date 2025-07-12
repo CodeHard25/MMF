@@ -17,6 +17,7 @@ const GroomingPage = lazy(() => import("./pages/GroomingPage.tsx"));
 const DevelopmentPage = lazy(() => import("./pages/DevelopmentPage.tsx"));
 const FashionChatPage = lazy(() => import("./pages/FashionChatPage.tsx"));
 const VirtualTryOnPage = lazy(() => import("./pages/VirtualTryOnPage.tsx"));
+const AuthCallback = lazy(() => import("./pages/AuthCallback.tsx"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -53,6 +54,7 @@ const App = () => (
                 <Route path="/before-after" element={<BeforeAfter />} />
                 <Route path="/fashion-chat" element={<FashionChatPage />} />
                 <Route path="/virtual-tryon" element={<VirtualTryOnPage />} />
+                <Route path="/auth/callback" element={<AuthCallback />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
