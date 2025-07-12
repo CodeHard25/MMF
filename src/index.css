@@ -1,0 +1,378 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium Men's Fashion Design System */
+    --color-primary: #1a237e;
+    --color-primary-light: #3f51b5;
+    --color-primary-dark: #0d1117;
+    --color-accent: #ffc107;
+    --color-accent-light: #fff176;
+    --color-neutral: #263238;
+    --color-neutral-light: #fafafa;
+    --color-surface: #f5f5dc;
+    --color-surface-dark: #21262d;
+
+    --spacing-base: 8px;
+    --spacing-unit: 1rem;
+    --font-primary: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-ui: 'Montserrat', system-ui, sans-serif;
+
+    --shadow-premium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-elevated: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --shadow-fashion: 0 20px 40px rgba(26, 35, 126, 0.15);
+
+    --transition-premium: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Original Shadcn variables for compatibility */
+    --background: 40 30% 95%;
+    --foreground: 20 10% 15%;
+    --card: 40 30% 95%;
+    --card-foreground: 20 10% 15%;
+    --popover: 40 30% 95%;
+    --popover-foreground: 20 10% 15%;
+    --primary: 25 38% 48%;
+    --primary-foreground: 60 33% 98%;
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 20 10% 15%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 25 5% 45%;
+    --accent: 25 38% 48%;
+    --accent-foreground: 60 33% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 33% 98%;
+    --border: 40 30% 88%;
+    --input: 40 30% 88%;
+    --ring: 25 38% 48%;
+    --radius: 8px;
+  }
+
+  .dark {
+    /* Premium Dark Mode for Men's Fashion */
+    --color-primary: #3f51b5;
+    --color-primary-light: #5c6bc0;
+    --color-primary-dark: #0d1117;
+    --color-accent: #ffc107;
+    --color-accent-light: #fff176;
+    --color-neutral: #fafafa;
+    --color-neutral-light: #263238;
+    --color-surface: #21262d;
+    --color-surface-dark: #0d1117;
+
+    /* Original Shadcn dark mode variables */
+    --background: 220 20% 12%;
+    --foreground: 60 33% 98%;
+    --card: 220 20% 12%;
+    --card-foreground: 60 33% 98%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 60 33% 98%;
+
+    --primary: 220 70% 25%;
+    --primary-foreground: 60 33% 98%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 60 33% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 40 10% 75%;
+
+    --accent: 220 70% 25%;
+    --accent-foreground: 60 33% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 33% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 220 70% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Premium Card System */
+  .elevate-card {
+    @apply bg-stone-50 dark:bg-stone-800 rounded-lg shadow-lg border border-stone-200 dark:border-stone-700 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .elevate-card-glass {
+    @apply bg-stone-50/90 dark:bg-stone-800/90 backdrop-blur-sm rounded-lg shadow-xl border border-stone-200/30 dark:border-stone-600/30 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1;
+  }
+
+  .elevate-card-magazine {
+    @apply bg-gradient-to-br from-stone-50 to-amber-50/50 dark:from-stone-800 dark:to-stone-900 rounded-lg shadow-xl border border-stone-200/50 dark:border-stone-700/50 overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-[1.02];
+    aspect-ratio: 3/4;
+  }
+
+  /* Premium Button System */
+  .elevate-button {
+    @apply px-6 py-3 bg-amber-800 hover:bg-amber-900 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none;
+  }
+
+  .elevate-button-outline {
+    @apply px-6 py-3 border-2 border-amber-800 text-amber-800 dark:border-amber-400 dark:text-amber-400 font-semibold rounded-lg transition-all duration-300 ease-in-out hover:bg-amber-800 hover:text-white hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2;
+  }
+
+  .elevate-button-accent {
+    @apply px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2;
+  }
+  
+  /* Premium Chat Interface */
+  .elevate-chat-container {
+    @apply bg-gradient-to-br from-stone-50 via-stone-100 to-amber-50/30 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900 min-h-screen transition-all duration-300;
+  }
+
+  .elevate-chat-sidebar {
+    @apply bg-stone-50/95 dark:bg-stone-800/95 backdrop-blur-sm border-r border-stone-200/50 dark:border-stone-700/50 shadow-lg transition-all duration-300;
+  }
+
+  .elevate-chat-message {
+    @apply bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-200/30 dark:border-gray-700/30 transition-all duration-300 ease-in-out hover:shadow-xl;
+  }
+
+  .elevate-chat-message-user {
+    @apply bg-gradient-to-r from-amber-800 to-amber-900 text-white rounded-2xl rounded-br-md p-4 shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl;
+  }
+
+  .elevate-chat-message-user * {
+    @apply text-white !important;
+  }
+
+  .elevate-chat-message-ai {
+    @apply bg-gradient-to-r from-stone-50 to-stone-100 dark:from-stone-800 dark:to-stone-700 rounded-2xl rounded-bl-md p-4 shadow-lg border border-stone-200/30 dark:border-stone-700/30 transition-all duration-300 ease-in-out hover:shadow-xl;
+  }
+
+  .elevate-chat-input {
+    @apply bg-stone-50/90 dark:bg-stone-800/90 backdrop-blur-sm border border-stone-200 dark:border-stone-700 rounded-xl px-4 py-3 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:shadow-lg;
+  }
+  
+  /* Premium Form Components */
+  .elevate-input {
+    @apply bg-stone-50 dark:bg-stone-800 border border-stone-300 dark:border-stone-600 rounded-lg px-4 py-3 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:shadow-lg placeholder:text-stone-400 dark:placeholder:text-stone-500;
+  }
+
+  .elevate-input-floating {
+    @apply relative bg-transparent border-0 border-b-2 border-stone-300 dark:border-stone-600 rounded-none px-0 py-3 transition-all duration-300 ease-in-out focus:outline-none focus:border-amber-500 focus:shadow-none placeholder:text-transparent;
+  }
+
+  .elevate-label-floating {
+    @apply absolute left-0 top-3 text-stone-500 dark:text-stone-400 transition-all duration-300 ease-in-out pointer-events-none;
+  }
+
+  .elevate-input-floating:focus + .elevate-label-floating,
+  .elevate-input-floating:not(:placeholder-shown) + .elevate-label-floating {
+    @apply -translate-y-6 text-sm text-amber-600 dark:text-amber-400;
+  }
+
+  /* Premium Dropdown & Select */
+  .elevate-dropdown {
+    @apply bg-stone-50/95 dark:bg-stone-800/95 backdrop-blur-sm border border-stone-200 dark:border-stone-700 rounded-lg shadow-xl transition-all duration-300 ease-in-out;
+  }
+
+  .elevate-select {
+    @apply bg-stone-50 dark:bg-stone-800 border border-stone-300 dark:border-stone-600 rounded-lg px-4 py-3 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:shadow-lg;
+  }
+
+  /* Premium Typography System */
+  .elevate-heading-1 {
+    @apply font-serif font-bold text-6xl text-stone-900 dark:text-stone-100 leading-tight tracking-tight;
+  }
+
+  .elevate-heading-2 {
+    @apply font-serif font-semibold text-4xl text-stone-800 dark:text-stone-200 leading-tight tracking-tight;
+  }
+
+  .elevate-heading-3 {
+    @apply font-serif font-medium text-3xl text-stone-700 dark:text-stone-300 leading-tight tracking-wide;
+  }
+
+  .elevate-heading-4 {
+    @apply font-sans font-semibold text-xl text-stone-800 dark:text-stone-200 leading-snug tracking-wide;
+  }
+
+  .elevate-body-large {
+    @apply font-sans font-normal text-lg text-stone-700 dark:text-stone-300 leading-relaxed;
+  }
+
+  .elevate-body {
+    @apply font-sans font-normal text-base text-stone-600 dark:text-stone-400 leading-relaxed;
+  }
+
+  .elevate-caption {
+    @apply font-sans font-medium text-sm text-stone-500 dark:text-stone-500 leading-normal;
+  }
+
+  .elevate-ui-text {
+    @apply font-sans font-medium text-sm text-stone-700 dark:text-stone-300 leading-normal;
+  }
+
+  /* Premium Interaction States */
+  .elevate-hover-lift {
+    @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .elevate-hover-scale {
+    @apply transition-all duration-300 ease-in-out hover:scale-105;
+  }
+
+  .elevate-hover-glow {
+    @apply transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-amber-500/25;
+  }
+
+  .elevate-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-stone-50 dark:focus:ring-offset-stone-800 transition-all duration-300 ease-in-out;
+  }
+
+  /* Fashion-Specific Design Elements */
+  .elevate-pattern-herringbone {
+    background-image:
+      linear-gradient(45deg, transparent 40%, rgba(120, 113, 108, 0.05) 40%, rgba(120, 113, 108, 0.05) 60%, transparent 60%),
+      linear-gradient(-45deg, transparent 40%, rgba(120, 113, 108, 0.05) 40%, rgba(120, 113, 108, 0.05) 60%, transparent 60%);
+    background-size: 20px 20px;
+  }
+
+  .elevate-pattern-pinstripe {
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(120, 113, 108, 0.05) 2px,
+      rgba(120, 113, 108, 0.05) 3px
+    );
+  }
+
+  /* Premium Image Components */
+  .elevate-image-fashion {
+    @apply rounded-lg border-4 border-stone-100 dark:border-stone-700 shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+  }
+
+  .elevate-image-avatar {
+    @apply rounded-full border-2 border-stone-200 dark:border-stone-700 shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-110;
+  }
+
+  .elevate-image-skeleton {
+    @apply bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse rounded-lg;
+    background-size: 200% 100%;
+  }
+
+  /* Premium Loading Animations */
+  .elevate-spinner-fashion {
+    @apply w-8 h-8 border-2 border-stone-200 border-t-amber-700 rounded-full animate-spin;
+  }
+
+  .elevate-spinner-bow-tie {
+    @apply w-6 h-4 bg-amber-700 rounded-sm animate-pulse;
+    clip-path: polygon(0% 20%, 40% 20%, 40% 0%, 60% 0%, 60% 20%, 100% 20%, 100% 80%, 60% 80%, 60% 100%, 40% 100%, 40% 80%, 0% 80%);
+  }
+
+  /* Premium Scrollbar */
+  .elevate-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(180, 83, 9, 0.3) transparent;
+  }
+
+  .elevate-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .elevate-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .elevate-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(180, 83, 9, 0.3);
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+  }
+
+  .elevate-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(180, 83, 9, 0.5);
+  }
+
+  /* Legacy Enhanced Classes (Updated with Premium Design) */
+  .elevate-card-enhanced {
+    @apply elevate-card-glass;
+  }
+
+  .elevate-button-enhanced {
+    @apply elevate-button;
+  }
+
+  .elevate-button-outline-enhanced {
+    @apply elevate-button-outline;
+  }
+
+  .elevate-sidebar {
+    @apply elevate-chat-sidebar;
+  }
+
+  .elevate-text-primary {
+    @apply text-stone-900 dark:text-stone-100;
+  }
+
+  .elevate-text-secondary {
+    @apply text-stone-700 dark:text-stone-300;
+  }
+
+  .elevate-text-muted {
+    @apply text-stone-500 dark:text-stone-500;
+  }
+
+  .elevate-text-accent {
+    @apply text-amber-800 dark:text-amber-400;
+  }
+
+  /* Enhanced Typography for Better Visibility */
+  .elevate-heading-hero {
+    @apply font-serif font-bold text-7xl text-stone-900 dark:text-stone-100 leading-none tracking-tight;
+  }
+
+  .elevate-subheading {
+    @apply font-sans font-medium text-xl text-stone-600 dark:text-stone-400 leading-relaxed tracking-wide;
+  }
+
+  .elevate-text-contrast {
+    @apply text-stone-900 dark:text-stone-100 font-medium;
+  }
+
+  .elevate-text-emphasis {
+    @apply text-amber-800 dark:text-amber-300 font-semibold;
+  }
+
+  /* Premium Grid System */
+  .elevate-grid-8 {
+    display: grid;
+    gap: var(--spacing-base);
+  }
+
+  .elevate-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .elevate-section {
+    @apply py-16 lg:py-24;
+  }
+}
