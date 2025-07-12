@@ -38,9 +38,13 @@ export default defineConfig(({ mode }) => ({
           vendor: ["react", "react-dom", "react-router-dom"],
           ui: ["@/components/ui"],
         },
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
       },
     },
     // Reduce chunk size warnings threshold
     chunkSizeWarningLimit: 1000,
+    assetsDir: "assets",
   },
 }));

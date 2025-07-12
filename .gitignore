@@ -31,3 +31,5 @@ test-*.js
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
