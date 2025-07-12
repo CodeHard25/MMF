@@ -180,7 +180,7 @@ const Index = () => {
                       onClick={handleGetStarted}
                       disabled={loading}
                       variant="outline"
-                      className="w-full bg-gradient-to-r from-elevate-beige to-elevate-beige-dark hover:from-elevate-brown-light hover:to-elevate-brown text-elevate-brown-chocolate dark:text-elevate-beige-dark hover:text-white transition-all duration-200 flex items-center justify-center space-x-2"
+                      className="w-full  from-elevate-beige to-elevate-beige-dark hover:from-elevate-brown-light hover:to-elevate-brown text-elevate-brown-chocolate dark:text-elevate-beige-dark dark:bg-gray- hover:text-white transition-all duration-200 flex items-center justify-center space-x-2"
                     >
                       <LogIn className="w-4 h-4" />
                       <span>Login to Chat</span>
