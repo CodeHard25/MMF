@@ -1,4 +1,5 @@
--- Complete Storage Fix for All Upload Components
+-- This file is for Author's refference only. 
+--Complete Storage Fix for All Upload Components
 -- Run this in Supabase Dashboard → SQL Editor
 
 -- ========================================
