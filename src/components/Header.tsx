@@ -38,9 +38,9 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-2 text-xl md:text-2xl font-bold"
           >
-            <span className="text-amber-800 dark:text-amber-400">
+            <span className="text-amber-800 dark:text-gray-900">
               MMF
-              <span className="text-amber-600 dark:text-amber-300 text-sm ml-1 ">
+              <span className="text-amber-600 dark:text-gray-700 text-sm ml-1 ">
                 Men's Mastery Framework
               </span>
             </span>
